@@ -1,4 +1,6 @@
 
+"use client";
+
 // ==================================================
 // BAGIAN 1: IMPORT
 // ==================================================
@@ -76,14 +78,73 @@ export default function PetualanganLiterasi() {
       <Navbar />
 
       {/* ==================================================
-          BAGIAN 6: DAFTAR KARTU MISI PEMBELAJARAN
+          BAGIAN 6: HERO SECTION PETUALANGAN LITERASI
+          ================================================== */}
+      <section className="relative mx-auto grid max-w-7xl items-center gap-8 px-6 py-16 md:grid-cols-2 md:py-24">
+
+        {/* BAGIAN 6A: JUDUL DAN DESKRIPSI */}
+        <div className="relative z-10">
+
+          {/* LABEL SAMBUTAN */}
+          <span className="inline-block rounded-full bg-[#FFF0C9] px-5 py-2 text-sm font-bold text-[#B47B20]">
+            ✨ Petualangan Literasi dimulai!
+          </span>
+
+          {/* JUDUL UTAMA */}
+          <h2 className="mt-7 text-5xl font-black leading-tight text-[#354B68] md:text-6xl">
+            Yuk, Jadi
+            <span className="block text-[#F2A93B]">
+              Penjelajah Ilmu!
+            </span>
+          </h2>
+
+          {/* DESKRIPSI WEBSITE */}
+          <p className="mt-6 max-w-lg text-lg leading-8 text-gray-600">
+            Hai, teman-teman! Bersama Owi, kita akan belajar
+            mengenal perpustakaan, mencari buku, dan menemukan
+            informasi melalui petualangan yang seru!
+          </p>
+
+          {/* BAGIAN 6B: TOMBOL LIHAT MISI */}
+          <a
+            href="#misi"
+            className="mt-8 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow-lg shadow-yellow-200 transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+          >
+            Lihat Misi Yuk! →
+          </a>
+        </div>
+
+        {/* BAGIAN 6C: ILUSTRASI MASKOT OWI */}
+        <div className="flex justify-center">
+          <div className="relative flex h-80 w-80 items-center justify-center rounded-full bg-[#DDF3FF] md:h-96 md:w-96">
+
+            {/* DEKORASI BINTANG DAN BUNGA */}
+            <span className="absolute left-8 top-10 text-4xl">⭐</span>
+            <span className="absolute right-10 top-16 text-3xl">✨</span>
+            <span className="absolute bottom-12 left-10 text-3xl">🌼</span>
+
+            {/* MASKOT DAN NAMA OWI */}
+            <div className="text-center">
+              <div className="text-[150px] leading-none drop-shadow-lg md:text-[180px]">
+                🦉
+              </div>
+              <span className="mt-2 inline-block rounded-full bg-white px-7 py-2 font-black text-[#536B89] shadow">
+                Ayo belajar bersamaku!
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================================================
+          BAGIAN 7: DAFTAR KARTU MISI PEMBELAJARAN
           ================================================== */}
       <section
         id="misi"
-        className="mx-auto max-w-7xl scroll-mt-8 px-6 py-16"
+        className="mx-auto max-w-7xl scroll-mt-8 px-6 pb-24"
       >
 
-        {/* BAGIAN 6A: JUDUL DAN DESKRIPSI MISI */}
+        {/* BAGIAN 7A: JUDUL DAN DESKRIPSI MISI */}
         <div className="mb-9 text-center">
           <p className="font-bold text-[#E9A638]">
             🌈 Ayo belajar sambil bermain
@@ -98,7 +159,7 @@ export default function PetualanganLiterasi() {
           </p>
         </div>
 
-        {/* BAGIAN 6B: KARTU MISI TERHUBUNG KE HALAMAN LAIN */}
+        {/* BAGIAN 7B: KARTU MISI TERHUBUNG KE HALAMAN LAIN */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {missions.map((mission) => (
             <KartuMisi
@@ -115,7 +176,7 @@ export default function PetualanganLiterasi() {
       </section>
 
       {/* ==================================================
-          BAGIAN 7: FOOTER
+          BAGIAN 8: FOOTER
           ================================================== */}
       <Footer />
 
