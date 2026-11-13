@@ -422,7 +422,7 @@ export default function DuniaKecilOwi() {
             type="button"
             onClick={() =>
               speak(
-                "Terima kasih, teman kecil! Kamu hebat sekali. Sampai jumpa lagi. Jangan lupa membaca buku bersama orang tua, ya!"
+                "Terima kasih, adik adik! Kamu hebat sekali. Sampai jumpa lagi. Jangan lupa membaca buku bersama orang tua, ya!"
               )
             }
             className="mt-6 rounded-2xl bg-[#F5B942] px-7 py-4 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1"
