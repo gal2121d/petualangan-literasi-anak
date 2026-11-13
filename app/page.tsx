@@ -132,7 +132,7 @@ export default function Home() {
 
           {/* PILIHAN 2: JALUR ANAK USIA 6–12 TAHUN */}
           <a
-            href="#misi"
+            href="/petualangan-literasi"
             className="rounded-3xl border-2 border-white bg-[#E2F3FF] p-8 text-center shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
           >
             <div className="text-7xl">📚</div>
