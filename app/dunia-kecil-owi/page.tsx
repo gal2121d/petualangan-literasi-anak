@@ -333,7 +333,7 @@ export default function DuniaKecilOwi() {
           </div>
 
           <div className="mt-10 rounded-3xl bg-white p-6 text-center shadow-sm md:p-10">
-            <div className="text-7xl">🦉</div>
+        
 
             <h3 className="mt-4 text-xl font-black text-[#354B68]">
               Mana gambar kucing?
