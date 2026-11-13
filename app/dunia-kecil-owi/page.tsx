@@ -115,7 +115,7 @@ export default function DuniaKecilOwi() {
           </span>
 
           <h1 className="mt-6 text-4xl font-black leading-tight text-[#354B68] md:text-6xl">
-            Halo, Teman Kecil!
+            Halo, Adik-adik!
             <span className="mt-2 block text-[#F2A93B]">
               Yuk, Bermain!
             </span>
@@ -128,7 +128,7 @@ export default function DuniaKecilOwi() {
 
           <button
             type="button"
-            onClick={() => speak("Halo, teman kecil! Aku Owi. Yuk, kita bermain dan mengenal buku bersama!")}
+            onClick={() => speak("Halo, adik adik! Aku Owi. Yuk, kita bermain dan mengenal buku bersama!")}
             className="mt-6 rounded-2xl bg-[#F5B942] px-7 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
           >
             🔊 Dengarkan Sapaan Owi
@@ -300,7 +300,7 @@ export default function DuniaKecilOwi() {
 
         <div className="mt-8 rounded-3xl bg-[#FFF0C9] p-6 text-center">
           <p className="font-bold text-[#805B24]">
-            💛 Ingat, teman kecil!
+            💛 Ingat, adik adik!
           </p>
           <p className="mt-2 text-sm leading-6 text-[#805B24]">
             Saat meminjam atau mengembalikan buku, mintalah bantuan
@@ -409,7 +409,7 @@ export default function DuniaKecilOwi() {
           <div className="text-8xl">🦉🌟</div>
 
           <h2 className="mt-5 text-3xl font-black text-[#354B68]">
-            Hebat Sekali, Teman Kecil!
+            Hebat Sekali, Adik-adik!
           </h2>
 
           <p className="mx-auto mt-4 max-w-xl leading-8 text-gray-600">
