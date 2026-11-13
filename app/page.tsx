@@ -104,7 +104,7 @@ export default function Home() {
 
           {/* BAGIAN 6B: TOMBOL MULAI PETUALANGAN */}
           <a
-            href="#misi"
+            href="#pilih-usia"
             className="mt-8 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow-lg shadow-yellow-200 transition hover:-translate-y-1 hover:bg-[#F8C95E]"
           >
             Mulai Petualangan →
@@ -134,14 +134,86 @@ export default function Home() {
       </section>
 
       {/* ==================================================
-          BAGIAN 7: DAFTAR KARTU MISI PEMBELAJARAN
+          BAGIAN 7: PILIH JALUR PEMBELAJARAN BERDASARKAN USIA
+          ================================================== */}
+      <section
+        id="pilih-usia"
+        className="mx-auto max-w-7xl scroll-mt-8 px-6 py-12"
+      >
+
+        {/* BAGIAN 7A: JUDUL DAN DESKRIPSI PILIHAN USIA */}
+        <div className="mb-9 text-center">
+          <p className="font-bold text-[#E9A638]">
+            🌈 Satu Website, Dua Petualangan
+          </p>
+
+          <h2 className="mt-2 text-3xl font-black text-[#354B68] md:text-4xl">
+            Siapa yang Mau Belajar Bersama Owi?
+          </h2>
+
+          <p className="mx-auto mt-3 max-w-2xl leading-7 text-gray-500">
+            Setiap anak punya cara belajar yang berbeda.
+            Pilih jalur pembelajaran sesuai usiamu dan mulai petualangan!
+          </p>
+        </div>
+
+        {/* BAGIAN 7B: DUA PILIHAN JALUR PEMBELAJARAN */}
+        <div className="grid gap-6 md:grid-cols-2">
+
+          {/* PILIHAN 1: JALUR BALITA */}
+          <a
+            href="/dunia-kecil-owi"
+            className="rounded-3xl border-2 border-white bg-[#FFE8DF] p-8 text-center shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
+          >
+            <div className="text-7xl">🧸</div>
+
+            <h3 className="mt-5 text-2xl font-black text-[#354B68]">
+              Dunia Kecil Owi
+            </h3>
+
+            <p className="mt-3 leading-7 text-gray-600">
+              Petualangan untuk balita melalui gambar,
+              suara, cerita, dan permainan sederhana.
+            </p>
+
+            <span className="mt-6 inline-block rounded-2xl bg-[#F5B942] px-6 py-3 font-bold text-[#60451C]">
+              Untuk Balita →
+            </span>
+          </a>
+
+          {/* PILIHAN 2: JALUR ANAK USIA 6–12 TAHUN */}
+          <a
+            href="#misi"
+            className="rounded-3xl border-2 border-white bg-[#E2F3FF] p-8 text-center shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
+          >
+            <div className="text-7xl">📚</div>
+
+            <h3 className="mt-5 text-2xl font-black text-[#354B68]">
+              Petualangan Literasi
+            </h3>
+
+            <p className="mt-3 leading-7 text-gray-600">
+              Belajar mengenal perpustakaan dan mencari informasi
+              melalui enam misi pembelajaran.
+            </p>
+
+            <span className="mt-6 inline-block rounded-2xl bg-[#F5B942] px-6 py-3 font-bold text-[#60451C]">
+              Usia 6–12 Tahun →
+            </span>
+          </a>
+
+        </div>
+      </section>
+
+      {/* ==================================================
+          BAGIAN 8: DAFTAR KARTU MISI PEMBELAJARAN
           ================================================== */}
       <section
         id="misi"
         className="mx-auto max-w-7xl scroll-mt-8 px-6 pb-24"
       >
 
-        {/* BAGIAN 7A: JUDUL DAN DESKRIPSI MISI */}
+        {/* BAGIAN 8A: JUDUL DAN DESKRIPSI MISI */}
         <div className="mb-9 text-center">
           <p className="font-bold text-[#E9A638]">
             🌈 Ayo belajar sambil bermain
@@ -156,7 +228,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* BAGIAN 7B: KARTU MISI TERHUBUNG KE HALAMAN LAIN */}
+        {/* BAGIAN 8B: KARTU MISI TERHUBUNG KE HALAMAN LAIN */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {missions.map((mission) => (
             <KartuMisi
@@ -173,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* ==================================================
-          BAGIAN 8: FOOTER
+          BAGIAN 9: FOOTER
           ================================================== */}
       <Footer />
 
