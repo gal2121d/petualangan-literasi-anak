@@ -117,7 +117,7 @@ export default function Home() {
             <div className="text-7xl">🧸</div>
 
             <h3 className="mt-5 text-2xl font-black text-[#354B68]">
-              Dunia Kecil Owi
+              Ruang Bermain Balita
             </h3>
 
             <p className="mt-3 leading-7 text-gray-600">

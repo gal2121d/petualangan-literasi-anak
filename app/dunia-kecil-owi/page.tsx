@@ -122,16 +122,15 @@ export default function DuniaKecilOwi() {
           </h1>
 
           <p className="mt-5 max-w-lg text-lg leading-8 text-gray-600">
-            Hai! Aku Owi. Ayo kita mengenal buku, mendengarkan cerita,
-            dan bermain bersama. Siap memulai petualangan?
+            Hai, adik-adik! Aku Owi. Yuk, kita bermain dan mengenal buku bersama!
           </p>
 
           <button
             type="button"
-            onClick={() => speak("Halo, adik adik! Aku Owi. Yuk, kita bermain dan mengenal buku bersama!")}
+            onClick={() => speak("Hai, adik-adik! Aku Owi. Yuk, kita bermain dan mengenal buku bersama!")}
             className="mt-6 rounded-2xl bg-[#F5B942] px-7 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
           >
-            🔊 Dengarkan Sapaan Owi
+            🔊 Dengarkan Sapaan dari Owi
           </button>
 
           <a
@@ -229,16 +228,14 @@ export default function DuniaKecilOwi() {
             </h2>
 
             <p className="mt-4 leading-8 text-gray-600">
-              Suatu hari, Owi menemukan sebuah buku cerita.
-              Owi membuka bukunya dan melihat gambar kelinci.
-              Wah, ternyata banyak cerita menarik di dalam buku!
+              Suatu hari, Owi menemukan sebuah buku cerita. Owi membuka buku itu dan melihat gambar kelinci. Wah, ada banyak cerita seru di dalamnya!
             </p>
 
             <button
               type="button"
               onClick={() =>
                 speak(
-                  "Suatu hari, Owi menemukan sebuah buku cerita. Owi membuka bukunya dan melihat gambar kelinci. Wah, ternyata banyak cerita menarik di dalam buku!"
+                  "Suatu hari, Owi menemukan sebuah buku cerita. Owi membuka buku itu dan melihat gambar kelinci. Wah, ada banyak cerita seru di dalamnya!"
                 )
               }
               className="mt-6 rounded-2xl bg-[#F5B942] px-7 py-4 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1"
