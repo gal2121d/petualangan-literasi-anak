@@ -99,8 +99,8 @@ export default function TentukanTopik() {
 
           <p className="mt-3 leading-7 text-gray-700">
             Misalnya, kamu ingin mengetahui cara merawat kucing.
-            Maka, topik yang bisa kamu pilih adalah <strong>Hewan</strong>,
-            khususnya tentang <strong>Kucing</strong>.
+            Maka, topik yang kamu pilih adalah <strong>Hewan</strong>,
+            khususnya <strong>Kucing</strong>.
           </p>
         </div>
 

@@ -27,9 +27,9 @@ export default function CariKataKunci() {
         </h1>
 
         <p className="mt-5 text-lg leading-8 text-gray-600">
-          Setelah menentukan topik, sekarang kita perlu mencari kata kunci.
-          Kata kunci adalah kata penting yang mewakili informasi yang ingin
-          kita temukan.
+           Setelah menentukan topik, sekarang kita belajar mencari kata kunci.
+            Kata kunci adalah kata penting yang membantu kita menemukan
+            informasi yang dibutuhkan.
         </p>
 
         {/* BAGIAN 2C: CONTOH KATA KUNCI */}
@@ -39,8 +39,9 @@ export default function CariKataKunci() {
           </h2>
 
           <p className="mt-3 leading-7 text-gray-700">
-            Topik yang dipilih adalah hewan, khususnya kucing.
-            Kita bisa menggunakan beberapa kata kunci berikut:
+            Topik yang kita pilih adalah hewan, khususnya kucing.
+            Untuk mencari informasi tentang kucing, kita bisa menggunakan
+            beberapa kata kunci, seperti:
           </p>
 
           {/* DAFTAR KATA KUNCI */}
@@ -68,10 +69,10 @@ export default function CariKataKunci() {
           </h2>
 
           <ul className="mt-4 list-inside list-disc space-y-3 leading-7 text-gray-600">
-            <li>Gunakan kata yang berhubungan dengan topik.</li>
-            <li>Pilih kata yang singkat dan jelas.</li>
-            <li>Gunakan kata yang lebih khusus jika hasil pencarian terlalu banyak.</li>
-            <li>Coba beberapa kata yang berbeda untuk mendapatkan informasi.</li>
+            <li>Pilih kata yang sesuai dengan hal yang ingin kamu cari.</li>
+            <li>Gunakan kata yang pendek dan mudah dimengerti.</li>
+            <li>Kalau hasilnya terlalu banyak, coba gunakan kata yang lebih jelas.</li>
+            <li>Coba kata lain jika belum menemukan informasi yang kamu cari.</li>
           </ul>
         </div>
 
