@@ -73,8 +73,8 @@ export default function DuniaKecilOwi() {
 
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "id-ID";
-    utterance.rate = 0.85;
-    utterance.pitch = 1.1;
+    utterance.rate = 1;
+    utterance.pitch = 1.4;
 
     window.speechSynthesis.speak(utterance);
     setSpeechMessage("Owi sedang berbicara. Yuk, dengarkan!");
