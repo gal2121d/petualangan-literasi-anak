@@ -127,10 +127,13 @@ export default function DuniaKecilOwi() {
 
           <button
             type="button"
-            onClick={() => speak("Hai, adik-adik! Aku Owi. Yuk, kita bermain dan mengenal buku bersama!")}
-            className="mt-6 rounded-2xl bg-[#F5B942] px-7 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
-          >
-            🔊 Dengarkan Sapaan dari Owi
+              onClick={() => {
+              const audio = new Audio("/audio/sapaan-owi.mp3.webm");
+              audio.play();
+              }}
+              className="mt-6 rounded-2xl bg-[#F5B942] px-7 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+            >
+              🔊 Dengarkan Sapaan dari Owi
           </button>
 
           <a
