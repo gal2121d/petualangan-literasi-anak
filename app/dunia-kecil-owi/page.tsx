@@ -94,7 +94,7 @@ export default function DuniaKecilOwi() {
             </button>
 
             <a
-              href="#mulai-langkah"
+              href="#petualangan"
               className="rounded-2xl border-2 border-[#F5B942] bg-white px-7 py-4 font-extrabold text-[#60451C] transition hover:bg-[#FFF0C9]"
             >
               🚀 Mulai Petualangan!
@@ -200,30 +200,37 @@ export default function DuniaKecilOwi() {
           ))}
 
         </div>
+      </section>
 
-        {/* BAGIAN 6C: PETUNJUK MEMULAI */}
-        <div
-          id="mulai-langkah"
-          className="mt-10 scroll-mt-8 text-center"
-        >
+      {/* ==================================================
+          BAGIAN 7: AJAKAN DARI OWI
+      ================================================== */}
+      <section className="mx-auto max-w-5xl px-6 pb-16">
 
-          <p className="text-sm leading-6 text-gray-500">
-            Sudah siap? Tekan tombol di bawah untuk memulai kegiatan pertama!
+        <div className="rounded-[2rem] bg-[#FFF0C9] px-6 py-10 text-center">
+
+          <div className="text-6xl">🦉🌟</div>
+
+          <h2 className="mt-4 text-2xl font-black text-[#354B68]">
+            Sudah Siap Bermain?
+          </h2>
+
+          <p className="mt-3 leading-7 text-[#805B24]">
+            Tekan tombol di bawah untuk memulai kegiatan pertama!
           </p>
 
           <a
             href="/dunia-kecil-owi/kenali-buku"
-            className="mt-5 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+            className="mt-6 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1 hover:bg-[#F8C95E]"
           >
             📚 Mulai dari Langkah 1 →
           </a>
 
         </div>
-
       </section>
 
       {/* ==================================================
-          BAGIAN 7: FOOTER
+          BAGIAN 8: FOOTER
       ================================================== */}
       <Footer />
 
