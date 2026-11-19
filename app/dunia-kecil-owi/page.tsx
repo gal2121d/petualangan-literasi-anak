@@ -94,7 +94,7 @@ export default function DuniaKecilOwi() {
             </button>
 
             <a
-              href="/dunia-kecil-owi/kenali-buku"
+              href="#mulai-langkah"
               className="rounded-2xl border-2 border-[#F5B942] bg-white px-7 py-4 font-extrabold text-[#60451C] transition hover:bg-[#FFF0C9]"
             >
               🚀 Mulai Petualangan!
@@ -202,7 +202,10 @@ export default function DuniaKecilOwi() {
         </div>
 
         {/* BAGIAN 6C: PETUNJUK MEMULAI */}
-        <div className="mt-10 text-center">
+        <div
+          id="mulai-langkah"
+          className="mt-10 scroll-mt-8 text-center"
+        >
 
           <p className="text-sm leading-6 text-gray-500">
             Sudah siap? Tekan tombol di bawah untuk memulai kegiatan pertama!
@@ -238,7 +241,7 @@ export default function DuniaKecilOwi() {
           </p>
 
           <a
-            href="#petualangan"
+            href="#mulai-langkah"
             className="mt-6 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1 hover:bg-[#F8C95E]"
           >
             Mulai Petualangan! →
