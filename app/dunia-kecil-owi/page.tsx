@@ -8,40 +8,36 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 // ==================================================
-// BAGIAN 2: DATA KEGIATAN PETUALANGAN BALITA
+// BAGIAN 2: DATA URUTAN KEGIATAN PETUALANGAN BALITA
 // ==================================================
 const activities = [
   {
+    nomor: 1,
     icon: "📚",
     title: "Kenali Buku dan Gambar",
     desc: "Yuk, melihat gambar lucu dan mendengarkan namanya!",
-    href: "/dunia-kecil-owi/kenali-buku",
     color: "#E2F3FF",
-    label: "Ayo Lihat!",
   },
   {
+    nomor: 2,
     icon: "📖",
     title: "Dengarkan Cerita Owi",
-    desc: "Ada cerita menarik yang ingin Owi sampaikan!",
-    href: "/dunia-kecil-owi/cerita",
+    desc: "Ayo, dengarkan cerita menarik yang ingin Owi sampaikan!",
     color: "#FFF0CC",
-    label: "Ayo Dengar!",
   },
   {
+    nomor: 3,
     icon: "🏫",
     title: "Mengenal Perpustakaan",
     desc: "Yuk, mengenal tempat yang penuh dengan buku!",
-    href: "/dunia-kecil-owi/perpustakaan",
     color: "#E4F5DF",
-    label: "Ayo Kenali!",
   },
   {
+    nomor: 4,
     icon: "🎮",
     title: "Bermain Bersama Owi",
-    desc: "Ayo bermain dan temukan gambar yang benar!",
-    href: "/dunia-kecil-owi/permainan",
+    desc: "Ayo, bermain dan temukan gambar yang benar!",
     color: "#F1E8FF",
-    label: "Ayo Main!",
   },
 ];
 
@@ -77,7 +73,7 @@ export default function DuniaKecilOwi() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-lg text-lg leading-8 text-gray-600 md:mx-0">
-            Hai, adik-adik! Aku Owi. Yuk, kita melihat gambar lucu,
+            Hai, adik-adik! Aku Owi. Yuk, kita belajar mengenal buku,
             mendengarkan cerita, mengenal perpustakaan, dan bermain bersama!
           </p>
 
@@ -98,10 +94,10 @@ export default function DuniaKecilOwi() {
             </button>
 
             <a
-              href="#petualangan"
+              href="/dunia-kecil-owi/kenali-buku"
               className="rounded-2xl border-2 border-[#F5B942] bg-white px-7 py-4 font-extrabold text-[#60451C] transition hover:bg-[#FFF0C9]"
             >
-              Mulai Yuk! →
+              🚀 Mulai Petualangan!
             </a>
 
           </div>
@@ -140,7 +136,7 @@ export default function DuniaKecilOwi() {
       </section>
 
       {/* ==================================================
-          BAGIAN 6: PILIH KEGIATAN PETUALANGAN
+          BAGIAN 6: URUTAN PETUALANGAN OWI
           ================================================== */}
       <section
         id="petualangan"
@@ -155,44 +151,69 @@ export default function DuniaKecilOwi() {
           </p>
 
           <h2 className="mt-2 text-3xl font-black text-[#354B68] md:text-4xl">
-            Yuk, Kita Belajar!
+            Yuk, Ikuti Petualangan Owi!
           </h2>
 
-          <p className="mt-3 text-gray-500">
-            Ada banyak kegiatan seru yang menunggumu!
+          <p className="mx-auto mt-3 max-w-xl leading-7 text-gray-500">
+            Kita akan melakukan empat kegiatan seru secara berurutan.
+            Ikuti langkahnya sampai selesai, ya!
           </p>
 
         </div>
 
-        {/* BAGIAN 6B: KARTU KEGIATAN */}
+        {/* BAGIAN 6B: KARTU URUTAN KEGIATAN */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
           {activities.map((activity) => (
-            <a
-              key={activity.title}
-              href={activity.href}
+            <div
+              key={activity.nomor}
               style={{ backgroundColor: activity.color }}
-              className="block rounded-3xl border-2 border-white p-6 text-center shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
+              className="relative rounded-3xl border-2 border-white p-6 text-center shadow-sm"
             >
 
-              <div className="text-7xl">
+              {/* NOMOR URUTAN */}
+              <div className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white text-lg font-black text-[#536B89] shadow-sm">
+                {activity.nomor}
+              </div>
+
+              {/* GAMBAR KEGIATAN */}
+              <div className="mt-5 text-7xl">
                 {activity.icon}
               </div>
 
+              {/* JUDUL KEGIATAN */}
               <h3 className="mt-5 text-lg font-black text-[#354B68]">
                 {activity.title}
               </h3>
 
+              {/* PENJELASAN */}
               <p className="mt-3 text-sm leading-6 text-gray-600">
                 {activity.desc}
               </p>
 
+              {/* PENANDA URUTAN */}
               <p className="mt-5 font-bold text-[#536B89]">
-                {activity.label} →
+                Langkah {activity.nomor}
               </p>
 
-            </a>
+            </div>
           ))}
+
+        </div>
+
+        {/* BAGIAN 6C: PETUNJUK MEMULAI */}
+        <div className="mt-10 text-center">
+
+          <p className="text-sm leading-6 text-gray-500">
+            Sudah siap? Tekan tombol di bawah untuk memulai kegiatan pertama!
+          </p>
+
+          <a
+            href="/dunia-kecil-owi/kenali-buku"
+            className="mt-5 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+          >
+            📚 Mulai dari Langkah 1 →
+          </a>
 
         </div>
       </section>
@@ -212,7 +233,8 @@ export default function DuniaKecilOwi() {
 
           <p className="mt-3 leading-7 text-[#805B24]">
             Ayo, ikuti petualangan bersama Owi.
-            Kita akan belajar sambil bermain!
+            Kita akan mengenal buku, mendengarkan cerita,
+            dan bermain sambil belajar!
           </p>
 
           <a
