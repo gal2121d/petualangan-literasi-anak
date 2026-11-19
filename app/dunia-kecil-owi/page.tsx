@@ -219,7 +219,6 @@ export default function DuniaKecilOwi() {
           </a>
 
         </div>
-
       </section>
 
       {/* ==================================================
@@ -229,23 +228,24 @@ export default function DuniaKecilOwi() {
 
         <div className="rounded-[2rem] bg-[#FFF0C9] px-6 py-10 text-center">
 
-          <div
-          id="mulai-langkah"
-          className="mt-10 scroll-mt-8 text-center"
-        >
+          <div className="text-6xl">🦉🌟</div>
 
-          <p className="text-sm leading-6 text-gray-500">
-            Sudah siap? Tekan tombol di bawah untuk memulai kegiatan pertama!
+          <h2 className="mt-4 text-2xl font-black text-[#354B68]">
+            Sudah Siap Bermain?
+          </h2>
+
+          <p className="mt-3 leading-7 text-[#805B24]">
+            Ayo, ikuti petualangan bersama Owi.
+            Kita akan mengenal buku, mendengarkan cerita,
+            dan bermain sambil belajar!
           </p>
 
           <a
             href="/dunia-kecil-owi/kenali-buku"
-            className="mt-5 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+            className="mt-6 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1 hover:bg-[#F8C95E]"
           >
-            📚 Mulai dari Langkah 1 →
+            Mulai Petualangan! →
           </a>
-
-        </div>
 
         </div>
       </section>
