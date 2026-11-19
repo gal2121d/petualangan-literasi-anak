@@ -94,7 +94,7 @@ export default function DuniaKecilOwi() {
             </button>
 
             <a
-              href="#petualangan"
+              href="#mulai-langkah"
               className="rounded-2xl border-2 border-[#F5B942] bg-white px-7 py-4 font-extrabold text-[#60451C] transition hover:bg-[#FFF0C9]"
             >
               🚀 Mulai Petualangan!
@@ -202,32 +202,12 @@ export default function DuniaKecilOwi() {
         </div>
       </section>
 
-      {/* ==================================================
-          BAGIAN 7: AJAKAN DARI OWI
-      ================================================== */}
-      <section className="mx-auto max-w-5xl px-6 pb-16">
-
-        <div className="rounded-[2rem] bg-[#FFF0C9] px-6 py-10 text-center">
-
-          <div className="text-6xl">🦉🌟</div>
-
-          <h2 className="mt-4 text-2xl font-black text-[#354B68]">
-            Sudah Siap Bermain?
-          </h2>
-
-          <p className="mt-3 leading-7 text-[#805B24]">
-            Tekan tombol di bawah untuk memulai kegiatan pertama!
-          </p>
-
-          <a
-            href="/dunia-kecil-owi/kenali-buku"
-            className="mt-6 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1 hover:bg-[#F8C95E]"
-          >
-            📚 Mulai dari Langkah 1 →
-          </a>
-
-        </div>
-      </section>
+      <a
+  href="#mulai-langkah"
+  className="rounded-2xl border-2 border-[#F5B942] bg-white px-7 py-4 font-extrabold text-[#60451C] transition hover:bg-[#FFF0C9]"
+>
+  🚀 Mulai Petualangan!
+</a>
 
       {/* ==================================================
           BAGIAN 8: FOOTER
