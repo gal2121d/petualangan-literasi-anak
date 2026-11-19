@@ -50,12 +50,12 @@ export default function DuniaKecilOwi() {
 
       {/* ==================================================
           BAGIAN 4: NAVBAR
-          ================================================== */}
+      ================================================== */}
       <Navbar />
 
       {/* ==================================================
           BAGIAN 5: HERO SECTION / SAMBUTAN OWI
-          ================================================== */}
+      ================================================== */}
       <section className="relative mx-auto grid max-w-7xl items-center gap-8 px-6 py-14 md:grid-cols-2 md:py-20">
 
         {/* BAGIAN 5A: JUDUL DAN SAMBUTAN */}
@@ -137,7 +137,7 @@ export default function DuniaKecilOwi() {
 
       {/* ==================================================
           BAGIAN 6: URUTAN PETUALANGAN OWI
-          ================================================== */}
+      ================================================== */}
       <section
         id="petualangan"
         className="mx-auto max-w-7xl scroll-mt-8 px-6 pb-20 pt-8"
@@ -201,38 +201,30 @@ export default function DuniaKecilOwi() {
 
         </div>
 
-      </section>
+        {/* BAGIAN 6C: PETUNJUK MEMULAI */}
+        <div
+          id="mulai-langkah"
+          className="mt-10 scroll-mt-8 text-center"
+        >
 
-      {/* ==================================================
-          BAGIAN 7: AJAKAN DARI OWI
-          ================================================== */}
-      <section className="mx-auto max-w-5xl px-6 pb-16">
-
-        <div className="rounded-[2rem] bg-[#FFF0C9] px-6 py-10 text-center">
-
-          <div className="text-6xl">🦉🌟</div>
-
-          <h2 className="mt-4 text-2xl font-black text-[#354B68]">
-            Sudah Siap Bermain?
-          </h2>
-
-          <p className="mt-3 leading-7 text-[#805B24]">
-           Tekan tombol di bawah untuk memulai kegiatan pertama!
+          <p className="text-sm leading-6 text-gray-500">
+            Sudah siap? Tekan tombol di bawah untuk memulai kegiatan pertama!
           </p>
 
           <a
             href="/dunia-kecil-owi/kenali-buku"
-            className="mt-6 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+            className="mt-5 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
           >
-            Mulai dari langkah 1 →
+            📚 Mulai dari Langkah 1 →
           </a>
 
         </div>
+
       </section>
 
       {/* ==================================================
-          BAGIAN 8: FOOTER
-          ================================================== */}
+          BAGIAN 7: FOOTER
+      ================================================== */}
       <Footer />
 
     </main>
