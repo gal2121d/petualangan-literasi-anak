@@ -94,10 +94,10 @@ export default function DuniaKecilOwi() {
             </button>
 
             <a
-            href="/dunia-kecil-owi/kenali-buku"
-            className="mt-5 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+              href="#mulai-langkah"
+              className="rounded-2xl border-2 border-[#F5B942] bg-white px-7 py-4 font-extrabold text-[#60451C] transition hover:bg-[#FFF0C9]"
             >
-              📚 Mulai dari Langkah 1 →
+              🚀 Mulai Petualangan!
             </a>
 
           </div>
@@ -242,9 +242,9 @@ export default function DuniaKecilOwi() {
 
           <a
             href="/dunia-kecil-owi/kenali-buku"
-            className="mt-6 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+            className="mt-5 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
           >
-           📚 Mulai Petualangan! →
+            📚 Mulai game woy →
           </a>
 
         </div>
