@@ -227,7 +227,9 @@ export default function DuniaKecilOwi() {
           ================================================== */}
       <section className="mx-auto max-w-5xl px-6 pb-16">
 
-        <div
+        <div className="rounded-[2rem] bg-[#FFF0C9] px-6 py-10 text-center">
+
+          <div
           id="mulai-langkah"
           className="mt-10 scroll-mt-8 text-center"
         >
@@ -242,6 +244,8 @@ export default function DuniaKecilOwi() {
           >
             📚 Mulai dari Langkah 1 →
           </a>
+
+        </div>
 
         </div>
       </section>
