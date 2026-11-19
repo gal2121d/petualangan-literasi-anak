@@ -6,222 +6,172 @@
 // ==================================================
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import KartuMisi from "@/components/KartuMisi";
 
 // ==================================================
-// BAGIAN 2: DATA KEGIATAN PETUALANGAN BALITA
+// BAGIAN 2: DATA MISI PEMBELAJARAN
 // ==================================================
-const activities = [
+const missions = [
   {
-    icon: "📚",
-    title: "Kenali Buku dan Gambar",
-    desc: "Yuk, melihat gambar lucu dan mendengarkan namanya!",
-    href: "/dunia-kecil-owi/kenali-buku",
-    color: "#E2F3FF",
-    label: "Ayo Lihat!",
-  },
-  {
-    icon: "📖",
-    title: "Dengarkan Cerita Owi",
-    desc: "Ada cerita menarik yang ingin Owi sampaikan!",
-    href: "/dunia-kecil-owi/cerita",
-    color: "#FFF0CC",
-    label: "Ayo Dengar!",
-  },
-  {
+    nomor: 1,
     icon: "🏫",
-    title: "Mengenal Perpustakaan",
-    desc: "Yuk, mengenal tempat yang penuh dengan buku!",
-    href: "/dunia-kecil-owi/perpustakaan",
-    color: "#E4F5DF",
-    label: "Ayo Kenali!",
+    title: "Kenali Perpustakaan",
+    desc: "Yuk, kenali tempat penuh ilmu!",
+    href: "/kenali-perpustakaan",
+    color: "#E2F3FF",
   },
   {
-    icon: "🎮",
-    title: "Bermain Bersama Owi",
-    desc: "Ayo bermain dan temukan gambar yang benar!",
-    href: "/dunia-kecil-owi/permainan",
+    nomor: 2,
+    icon: "💡",
+    title: "Tentukan Topik",
+    desc: "Pilih hal yang ingin kamu cari.",
+    href: "/tentukan-topik",
+    color: "#FFF0CC",
+  },
+  {
+    nomor: 3,
+    icon: "🔎",
+    title: "Cari Kata Kunci",
+    desc: "Temukan kata untuk pencarianmu.",
+    href: "/cari-kata-kunci",
+    color: "#E4F5DF",
+  },
+  {
+    nomor: 4,
+    icon: "📚",
+    title: "Gunakan Katalog",
+    desc: "Cari buku dengan lebih mudah.",
+    href: "/gunakan-katalog",
     color: "#F1E8FF",
-    label: "Ayo Main!",
+  },
+  {
+    nomor: 5,
+    icon: "📖",
+    title: "Temukan Buku",
+    desc: "Temukan buku yang kamu cari.",
+    href: "/temukan-buku",
+    color: "#FFE8DF",
+  },
+  {
+    nomor: 6,
+    icon: "🎮",
+    title: "Permainan dan Kuis",
+    desc: "Uji pengetahuanmu sambil bermain.",
+    href: "/permainan",
+    color: "#E0F5F2",
   },
 ];
 
 // ==================================================
-// BAGIAN 3: KOMPONEN UTAMA HALAMAN DUNIA KECIL OWI
+// BAGIAN 3: KOMPONEN UTAMA HALAMAN PETUALANGAN LITERASI
 // ==================================================
-export default function DuniaKecilOwi() {
+export default function PetualanganLiterasi() {
   return (
+    // ==================================================
+    // BAGIAN 4: PEMBUNGKUS UTAMA WEBSITE
+    // ==================================================
     <main className="min-h-screen overflow-hidden bg-[#FFFDF5] text-[#34445B]">
 
       {/* ==================================================
-          BAGIAN 4: NAVBAR
+          BAGIAN 5: NAVBAR / MENU NAVIGASI ATAS
           ================================================== */}
       <Navbar />
 
       {/* ==================================================
-          BAGIAN 5: HERO SECTION / SAMBUTAN OWI
+          BAGIAN 6: HERO SECTION PETUALANGAN LITERASI
           ================================================== */}
-      <section className="relative mx-auto grid max-w-7xl items-center gap-8 px-6 py-14 md:grid-cols-2 md:py-20">
+      <section className="relative mx-auto grid max-w-7xl items-center gap-8 px-6 py-16 md:grid-cols-2 md:py-24">
 
-        {/* BAGIAN 5A: JUDUL DAN SAMBUTAN */}
-        <div className="relative z-10 text-center md:text-left">
+        {/* BAGIAN 6A: JUDUL DAN DESKRIPSI */}
+        <div className="relative z-10">
 
+          {/* LABEL SAMBUTAN */}
           <span className="inline-block rounded-full bg-[#FFF0C9] px-5 py-2 text-sm font-bold text-[#B47B20]">
-            🌈 Selamat Datang di Dunia Kecil Owi!
+            ✨ Petualangan Literasi dimulai!
           </span>
 
-          <h1 className="mt-6 text-4xl font-black leading-tight text-[#354B68] md:text-6xl">
-            Halo, Adik-adik!
-            <span className="mt-2 block text-[#F2A93B]">
-              Yuk, Bermain!
+          {/* JUDUL UTAMA */}
+          <h2 className="mt-7 text-5xl font-black leading-tight text-[#354B68] md:text-6xl">
+            Yuk, Jadi
+            <span className="block text-[#F2A93B]">
+              Penjelajah Ilmu!
             </span>
-          </h1>
+          </h2>
 
-          <p className="mx-auto mt-5 max-w-lg text-lg leading-8 text-gray-600 md:mx-0">
-            Hai, adik-adik! Aku Owi. Yuk, kita melihat gambar lucu,
-            mendengarkan cerita, mengenal perpustakaan, dan bermain bersama!
+          {/* DESKRIPSI WEBSITE */}
+          <p className="mt-6 max-w-lg text-lg leading-8 text-gray-600">
+            Hai, teman-teman! Bersama Owi, kita akan belajar
+            mengenal perpustakaan, mencari buku, dan menemukan
+            informasi melalui petualangan yang seru!
           </p>
 
-          {/* BAGIAN 5B: TOMBOL AUDIO DAN MULAI */}
-          <div className="mt-7 flex flex-wrap justify-center gap-3 md:justify-start">
-
-            <button
-              type="button"
-              onClick={() => {
-                const audio = new Audio("/audio/sapaan-owi.mp3.webm");
-                audio.play().catch(() => {
-                  alert("Audio belum bisa diputar. Periksa kembali file rekaman Owi.");
-                });
-              }}
-              className="rounded-2xl bg-[#F5B942] px-7 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
-            >
-              🔊 Dengarkan Sapaan Owi
-            </button>
-
-            <a
-              href="#petualangan"
-              className="rounded-2xl border-2 border-[#F5B942] bg-white px-7 py-4 font-extrabold text-[#60451C] transition hover:bg-[#FFF0C9]"
-            >
-              Mulai Yuk! →
-            </a>
-
-          </div>
-
-          {/* HIASAN */}
-          <div className="mt-8 flex justify-center gap-5 text-3xl md:justify-start">
-            <span>🌼</span>
-            <span>⭐</span>
-            <span>🧸</span>
-            <span>🌈</span>
-            <span>💛</span>
-          </div>
+          {/* BAGIAN 6B: TOMBOL LIHAT MISI */}
+          <a
+            href="#misi"
+            className="mt-8 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow-lg shadow-yellow-200 transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+          >
+            Lihat Misi Yuk! →
+          </a>
         </div>
 
-        {/* BAGIAN 5C: MASKOT OWI */}
+        {/* BAGIAN 6C: ILUSTRASI MASKOT OWI */}
         <div className="flex justify-center">
-          <div className="relative flex h-72 w-72 items-center justify-center rounded-full bg-[#DDF3FF] shadow-sm md:h-96 md:w-96">
+          <div className="relative flex h-80 w-80 items-center justify-center rounded-full bg-[#DDF3FF] md:h-96 md:w-96">
 
-            <span className="absolute left-8 top-8 text-4xl">⭐</span>
-            <span className="absolute right-8 top-12 text-3xl">✨</span>
-            <span className="absolute bottom-10 left-8 text-3xl">🌼</span>
-            <span className="absolute bottom-12 right-8 text-3xl">💛</span>
+            {/* DEKORASI BINTANG DAN BUNGA */}
+            <span className="absolute left-8 top-10 text-4xl">⭐</span>
+            <span className="absolute right-10 top-16 text-3xl">✨</span>
+            <span className="absolute bottom-12 left-10 text-3xl">🌼</span>
 
+            {/* MASKOT DAN NAMA OWI */}
             <div className="text-center">
-              <div className="text-[145px] leading-none drop-shadow-lg md:text-[180px]">
+              <div className="text-[150px] leading-none drop-shadow-lg md:text-[180px]">
                 🦉
               </div>
-
-              <span className="mt-3 inline-block rounded-full bg-white px-7 py-3 font-black text-[#536B89] shadow">
-                Ayo bermain denganku!
+              <span className="mt-2 inline-block rounded-full bg-white px-7 py-2 font-black text-[#536B89] shadow">
+                Ayo belajar bersamaku!
               </span>
             </div>
-
           </div>
         </div>
       </section>
 
       {/* ==================================================
-          BAGIAN 6: PILIH KEGIATAN PETUALANGAN
+          BAGIAN 7: DAFTAR KARTU MISI PEMBELAJARAN
           ================================================== */}
       <section
-        id="petualangan"
-        className="mx-auto max-w-7xl scroll-mt-8 px-6 pb-20 pt-8"
+        id="misi"
+        className="mx-auto max-w-7xl scroll-mt-8 px-6 pb-24"
       >
 
-        {/* BAGIAN 6A: JUDUL KEGIATAN */}
-        <div className="mb-10 text-center">
-
+        {/* BAGIAN 7A: JUDUL DAN DESKRIPSI MISI */}
+        <div className="mb-9 text-center">
           <p className="font-bold text-[#E9A638]">
-            🎈 Petualangan kecil bersama Owi
+            🌈 Ayo belajar sambil bermain
           </p>
 
           <h2 className="mt-2 text-3xl font-black text-[#354B68] md:text-4xl">
-            Yuk, Kita Belajar!
+            Pilih Misi Serumu!
           </h2>
 
           <p className="mt-3 text-gray-500">
-            Ada banyak kegiatan seru yang menunggumu!
+            Ada banyak hal menarik yang bisa kamu pelajari.
           </p>
-
         </div>
 
-        {/* BAGIAN 6B: KARTU KEGIATAN */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-
-          {activities.map((activity) => (
-            <a
-              key={activity.title}
-              href={activity.href}
-              style={{ backgroundColor: activity.color }}
-              className="block rounded-3xl border-2 border-white p-6 text-center shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
-            >
-
-              <div className="text-7xl">
-                {activity.icon}
-              </div>
-
-              <h3 className="mt-5 text-lg font-black text-[#354B68]">
-                {activity.title}
-              </h3>
-
-              <p className="mt-3 text-sm leading-6 text-gray-600">
-                {activity.desc}
-              </p>
-
-              <p className="mt-5 font-bold text-[#536B89]">
-                {activity.label} →
-              </p>
-
-            </a>
+        {/* BAGIAN 7B: KARTU MISI TERHUBUNG KE HALAMAN LAIN */}
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {missions.map((mission) => (
+            <KartuMisi
+              key={mission.nomor}
+              nomor={mission.nomor}
+              icon={mission.icon}
+              title={mission.title}
+              desc={mission.desc}
+              href={mission.href}
+              color={mission.color}
+            />
           ))}
-
-        </div>
-      </section>
-
-      {/* ==================================================
-          BAGIAN 7: AJAKAN DARI OWI
-          ================================================== */}
-      <section className="mx-auto max-w-5xl px-6 pb-16">
-
-        <div className="rounded-[2rem] bg-[#FFF0C9] px-6 py-10 text-center">
-
-          <div className="text-6xl">🦉🌟</div>
-
-          <h2 className="mt-4 text-2xl font-black text-[#354B68]">
-            Sudah Siap Bermain?
-          </h2>
-
-          <p className="mt-3 leading-7 text-[#805B24]">
-            Ayo, ikuti petualangan bersama Owi.
-            Kita akan belajar sambil bermain!
-          </p>
-
-          <a
-            href="/dunia-kecil-owi/kenali-buku"
-            className="mt-6 inline-block rounded-2xl bg-[#F5B942] px-8 py-4 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1 hover:bg-[#F8C95E]"
-          >
-            Mulai Petualangan! →
-          </a>
-
         </div>
       </section>
 
