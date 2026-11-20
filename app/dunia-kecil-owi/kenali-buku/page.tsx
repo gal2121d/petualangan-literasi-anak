@@ -7,10 +7,10 @@ import Footer from "@/components/Footer";
 import NavigasiBalita from "@/components/NavigasiBalita";
 
 const pictures = [
-  { icon: "🐱", name: "Kucing", audio: "kucing.wav", color: "#E2F3FF" },
-  { icon: "🐦", name: "Burung", audio: "burung.wav", color: "#FFF0CC" },
-  { icon: "🐸", name: "Katak", audio: "katak.wav", color: "#FFE8DF" },
-  { icon: "🐮", name: "Sapi", audio: "sapi.wav", color: "#E4F5DF" },
+  { icon: "🐱", name: "Kucing", audio: "kucing.mp3.wav", color: "#E2F3FF" },
+  { icon: "🐦", name: "Burung", audio: "burung.mp3.wav", color: "#FFF0CC" },
+  { icon: "🐸", name: "Katak", audio: "kodok.mp3.wav", color: "#FFE8DF" },
+  { icon: "🐮", name: "Sapi", audio: "sapi.mp3.wav", color: "#E4F5DF" },
 ];
 
 export default function KenaliBuku() {
