@@ -45,19 +45,19 @@ export default function KenaliBuku() {
           </h1>
 
           <p className="mt-3 text-gray-500">
-            Tekan gambar untuk mendengarkan namanya.
-          </p>
-          <p className="mt-3 text-gray-500">
-            Tekan gambar untuk mendengarkan namanya.
-          </p>
+          Tekan gambar untuk mendengarkan namanya.
+        </p>
 
+        {/* TOMBOL AUDIO PETUNJUK OWI */}
+        <div className="mt-7 flex justify-center">
           <button
             type="button"
             onClick={() => playAudio("petunjuk-gambar.wav")}
-            className="mt-5 rounded-2xl border-2 border-[#F5B942] bg-white px-6 py-3 font-extrabold text-[#60451C] shadow-sm transition hover:-translate-y-1"
+            className="rounded-2xl bg-[#F5B942] px-7 py-4 font-extrabold text-[#60451C] shadow-lg transition hover:-translate-y-1 hover:bg-[#F8C95E]"
           >
             🔊 Dengarkan Petunjuk Owi
           </button>
+        </div>
         </div>
 
         {/* Kartu gambar */}
