@@ -49,16 +49,12 @@ export default function KenaliBuku() {
           </p>
         </div>
 
-        {/* Kartu gambar */}
         <div className="mx-auto grid max-w-5xl grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
           {pictures.map((item) => (
-            <button
+            <div
               key={item.name}
-              type="button"
-              onClick={() => playAudio(item.audio)}
               style={{ backgroundColor: item.color }}
-              className="w-full rounded-3xl border-2 border-white p-6 text-center shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
-              aria-label={`Dengarkan suara ${item.name}`}
+              className="rounded-3xl border-2 border-white p-6 text-center shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
             >
               <span className="block text-6xl">{item.icon}</span>
 
@@ -66,10 +62,15 @@ export default function KenaliBuku() {
                 {item.name}
               </span>
 
-              <span className="mt-2 block text-sm text-gray-600">
+              <button
+                type="button"
+                onClick={() => playAudio(item.audio)}
+                className="mt-4 rounded-xl bg-white px-4 py-2 text-sm font-bold text-[#354B68] shadow-sm transition hover:bg-[#FFF5D9]"
+                aria-label={`Dengarkan suara ${item.name}`}
+              >
                 🔊 Dengarkan
-              </span>
-            </button>
+              </button>
+            </div>
           ))}
         </div>
 
