@@ -33,31 +33,39 @@ export default function KenaliBuku() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#FFFDF5] text-[#34445B]">
       <Navbar />
+
       <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="mb-10 text-center">
-          <p className="font-bold text-[#E9A638]">📚 Belajar mengenal gambar</p>
+        <div className="mb-12 text-center">
+          <p className="font-bold text-[#E9A638]">
+            📚 Belajar mengenal gambar
+          </p>
+
           <h1 className="mt-2 text-3xl font-black text-[#354B68] md:text-4xl">
             Ayo, Kenali Gambar!
           </h1>
+
           <p className="mt-3 text-gray-500">
             Tekan gambar untuk mendengarkan namanya.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
+        {/* Kartu gambar */}
+        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4">
           {pictures.map((item) => (
             <button
               key={item.name}
               type="button"
               onClick={() => playAudio(item.audio)}
               style={{ backgroundColor: item.color }}
-              className="rounded-3xl border-2 border-white p-5 text-center shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
+              className="w-full rounded-3xl border-2 border-white p-6 text-center shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
               aria-label={`Dengarkan suara ${item.name}`}
             >
               <span className="block text-6xl">{item.icon}</span>
+
               <span className="mt-3 block font-black text-[#354B68]">
                 {item.name}
               </span>
+
               <span className="mt-2 block text-sm text-gray-600">
                 🔊 Dengarkan
               </span>
@@ -69,7 +77,7 @@ export default function KenaliBuku() {
           <p
             role="status"
             aria-live="polite"
-            className="mt-6 text-center text-sm font-semibold text-[#536B89]"
+            className="mt-8 text-center text-sm font-semibold text-[#536B89]"
           >
             {speechMessage}
           </p>
@@ -80,6 +88,7 @@ export default function KenaliBuku() {
         previousHref="/dunia-kecil-owi"
         nextHref="/dunia-kecil-owi/cerita"
       />
+
       <Footer />
     </main>
   );
