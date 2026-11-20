@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -6,29 +7,27 @@ import Footer from "@/components/Footer";
 import NavigasiBalita from "@/components/NavigasiBalita";
 
 const pictures = [
-  { icon: "🐱", name: "Kucing", color: "#E2F3FF" },
-  { icon: "🐰", name: "Kelinci", color: "#FFF0CC" },
-  { icon: "🍎", name: "Apel", color: "#FFE8DF" },
-  { icon: "🍌", name: "Pisang", color: "#FFF5C9" },
-  { icon: "🐘", name: "Gajah", color: "#E4F5DF" },
-  { icon: "📚", name: "Buku", color: "#F1E8FF" },
+  { icon: "🐱", name: "Kucing", audio: "kucing.wav", color: "#E2F3FF" },
+  { icon: "🐦", name: "Burung", audio: "burung.wav", color: "#FFF0CC" },
+  { icon: "🐸", name: "Katak", audio: "katak.wav", color: "#FFE8DF" },
+  { icon: "🐮", name: "Sapi", audio: "sapi.wav", color: "#E4F5DF" },
 ];
 
 export default function KenaliBuku() {
   const [speechMessage, setSpeechMessage] = useState("");
 
-  function speak(text: string) {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-      setSpeechMessage("Maaf, fitur suara belum tersedia di perangkat ini.");
-      return;
-    }
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "id-ID";
-    utterance.rate = 1;
-    utterance.pitch = 1.4;
-    window.speechSynthesis.speak(utterance);
-    setSpeechMessage("Owi sedang berbicara. Yuk, dengarkan!");
+  function playAudio(fileName: string) {
+    const audio = new Audio(`/audio/${fileName}`);
+
+    audio.play()
+      .then(() => {
+        setSpeechMessage("Owi sedang berbicara. Yuk, dengarkan!");
+      })
+      .catch(() => {
+        setSpeechMessage(
+          "Maaf, audio belum bisa diputar. Periksa kembali file suara Owi."
+        );
+      });
   }
 
   return (
@@ -38,9 +37,11 @@ export default function KenaliBuku() {
         <div className="mb-10 text-center">
           <p className="font-bold text-[#E9A638]">📚 Belajar mengenal gambar</p>
           <h1 className="mt-2 text-3xl font-black text-[#354B68] md:text-4xl">
-            Ayo, Kenali Buku dan Gambar!
+            Ayo, Kenali Gambar!
           </h1>
-          <p className="mt-3 text-gray-500">Tekan gambar untuk mendengarkan namanya.</p>
+          <p className="mt-3 text-gray-500">
+            Tekan gambar untuk mendengarkan namanya.
+          </p>
         </div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
@@ -48,20 +49,28 @@ export default function KenaliBuku() {
             <button
               key={item.name}
               type="button"
-              onClick={() => speak(item.name)}
+              onClick={() => playAudio(item.audio)}
               style={{ backgroundColor: item.color }}
               className="rounded-3xl border-2 border-white p-5 text-center shadow-sm transition hover:-translate-y-2 hover:shadow-lg"
-              aria-label={`Dengarkan nama ${item.name}`}
+              aria-label={`Dengarkan suara ${item.name}`}
             >
               <span className="block text-6xl">{item.icon}</span>
-              <span className="mt-3 block font-black text-[#354B68]">{item.name}</span>
-              <span className="mt-2 block text-sm text-gray-600">🔊 Dengarkan</span>
+              <span className="mt-3 block font-black text-[#354B68]">
+                {item.name}
+              </span>
+              <span className="mt-2 block text-sm text-gray-600">
+                🔊 Dengarkan
+              </span>
             </button>
           ))}
         </div>
 
         {speechMessage && (
-          <p role="status" aria-live="polite" className="mt-6 text-center text-sm font-semibold text-[#536B89]">
+          <p
+            role="status"
+            aria-live="polite"
+            className="mt-6 text-center text-sm font-semibold text-[#536B89]"
+          >
             {speechMessage}
           </p>
         )}
