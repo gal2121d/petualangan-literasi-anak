@@ -34,7 +34,7 @@ export default function KenaliBuku() {
     <main className="min-h-screen overflow-hidden bg-[#FFFDF5] text-[#34445B]">
       <Navbar />
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-7xl px-6 pt-6 pb-16">
         <div className="mb-12 text-center">
           {/* HIASAN KECIL OWI */}
             <div className="mb-5 flex items-center justify-center gap-3">
