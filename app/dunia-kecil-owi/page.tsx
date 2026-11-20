@@ -17,13 +17,15 @@ const activities = [
     title: "Kenali Buku dan Gambar",
     desc: "Yuk, melihat gambar lucu dan mendengarkan namanya!",
     color: "#E2F3FF",
+    audio: "langkah-1.wav",
   },
   {
     nomor: 2,
     icon: "📖",
     title: "Dengarkan Cerita Owi",
-    desc: "Ayo, dengarkan cerita menarik yang ingin Owi sampaikan!",
+    desc: "Yuk, dengarkan cerita menarik yang ingin Owi sampaikan!",
     color: "#FFF0CC",
+    audio: "langkah-2.wav",
   },
   {
     nomor: 3,
@@ -31,13 +33,15 @@ const activities = [
     title: "Mengenal Perpustakaan",
     desc: "Yuk, mengenal tempat yang penuh dengan buku!",
     color: "#E4F5DF",
+    audio: "langkah-3.wav",
   },
   {
     nomor: 4,
     icon: "🎮",
     title: "Bermain Bersama Owi",
-    desc: "Ayo, bermain dan temukan gambar yang benar!",
+    desc: "Yuk, bermain dan temukan gambar yang benar!",
     color: "#F1E8FF",
+    audio: "langkah-4.wav",
   },
 ];
 
@@ -45,6 +49,15 @@ const activities = [
 // BAGIAN 3: KOMPONEN UTAMA HALAMAN DUNIA KECIL OWI
 // ==================================================
 export default function DuniaKecilOwi() {
+
+  // TAMBAHAN: FUNGSI UNTUK MEMUTAR AUDIO
+  const playAudio = (fileName: string) => {
+    const audio = new Audio(`/audio/${fileName}`);
+    audio.play().catch(() => {
+      alert("Audio belum bisa diputar. Periksa kembali file rekaman Owi.");
+    });
+  };
+
   return (
     <main className="min-h-screen overflow-hidden bg-[#FFFDF5] text-[#34445B]">
 
@@ -158,6 +171,15 @@ export default function DuniaKecilOwi() {
             Ikuti langkahnya sampai selesai, ya!
           </p>
 
+          {/* TAMBAHAN: AUDIO PETUALANGAN OWI */}
+          <button
+            type="button"
+            onClick={() => playAudio("petualangan-owi.wav")}
+            className="mt-5 rounded-2xl bg-[#F5B942] px-6 py-3 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+          >
+            🔊 Dengarkan Petualangan Owi
+          </button>
+
         </div>
 
         {/* BAGIAN 6B: KARTU URUTAN KEGIATAN */}
@@ -195,6 +217,15 @@ export default function DuniaKecilOwi() {
                 Langkah {activity.nomor}
               </p>
 
+              {/* TAMBAHAN: AUDIO SETIAP KARTU */}
+              <button
+                type="button"
+                onClick={() => playAudio(activity.audio)}
+                className="mt-4 rounded-xl bg-white px-5 py-3 font-bold text-[#536B89] shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              >
+                🔊 Dengarkan
+              </button>
+
             </div>
           ))}
 
@@ -220,6 +251,15 @@ export default function DuniaKecilOwi() {
           <p className="mt-3 leading-7 text-[#805B24]">
             Tekan tombol di bawah untuk memulai kegiatan pertama!
           </p>
+
+          {/* TAMBAHAN: AUDIO AJAKAN OWI */}
+          <button
+            type="button"
+            onClick={() => playAudio("ajakan-owi.wav")}
+            className="mt-5 rounded-2xl border-2 border-[#F5B942] bg-white px-6 py-3 font-extrabold text-[#60451C] shadow-sm transition hover:-translate-y-1"
+          >
+            🔊 Dengarkan Ajakan Owi
+          </button>
 
           <a
             href="/dunia-kecil-owi/kenali-buku"
