@@ -73,8 +73,7 @@ export default function DuniaKecilOwi() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-lg text-lg leading-8 text-gray-600 md:mx-0">
-            Hai, adik-adik! Aku Owi. Yuk, kita belajar mengenal buku,
-            mendengarkan cerita, mengenal perpustakaan, dan bermain bersama!
+            Hai, adik-adik! Kenalkan aku  Owi. Yuk, kita mengenal perpustakaan dengan bercerita dan bermain!
           </p>
 
           {/* BAGIAN 5B: TOMBOL AUDIO DAN MULAI */}
