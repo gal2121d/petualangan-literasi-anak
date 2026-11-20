@@ -36,6 +36,16 @@ export default function KenaliBuku() {
 
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="mb-12 text-center">
+          {/* HIASAN KECIL OWI */}
+            <div className="mb-5 flex items-center justify-center gap-3">
+              <span className="text-xl">✨</span>
+
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#DDF3FF] shadow-sm">
+                <span className="text-3xl">🦉</span>
+              </div>
+
+              <span className="text-xl">🌼</span>
+            </div>
           <p className="font-bold text-[#E9A638]">
             📚 Belajar mengenal gambar
           </p>
