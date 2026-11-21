@@ -4,7 +4,7 @@
 // ==================================================
 // BAGIAN 1: IMPORT
 // ==================================================
-import Navbar from "@/components/Navbar";
+import NavbarBalita from "@/components/NavbarBalita";
 import Footer from "@/components/Footer";
 
 // ==================================================
@@ -64,7 +64,7 @@ export default function DuniaKecilOwi() {
       {/* ==================================================
           BAGIAN 4: NAVBAR
       ================================================== */}
-      <Navbar />
+      <NavbarBalita />
 
       {/* ==================================================
           BAGIAN 5: HERO SECTION / SAMBUTAN OWI
@@ -174,7 +174,7 @@ export default function DuniaKecilOwi() {
           {/* TAMBAHAN: AUDIO PETUALANGAN OWI */}
           <button
             type="button"
-            onClick={() => playAudio("petualangan-owi.wav")}
+            onClick={() => playAudio("4.wav")}
             className="mt-5 rounded-2xl bg-[#F5B942] px-6 py-3 font-extrabold text-[#60451C] shadow transition hover:-translate-y-1 hover:bg-[#F8C95E]"
           >
             🔊 Dengarkan Petualangan Owi

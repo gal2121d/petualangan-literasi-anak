@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/Navbar";
+import NavbarBalita from "@/components/NavbarBalita";
 import Footer from "@/components/Footer";
 import NavigasiBalita from "@/components/NavigasiBalita";
 
@@ -32,7 +32,7 @@ export default function KenaliBuku() {
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#FFFDF5] text-[#34445B]">
-      <Navbar />
+      <NavbarBalita/>
 
       <section className="mx-auto max-w-7xl px-6 pt-6 pb-16">
         <div className="mb-12 text-center">

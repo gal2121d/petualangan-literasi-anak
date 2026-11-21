@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/Navbar";
+import NavbarBalita from "@/components/NavbarBalita";
 import Footer from "@/components/Footer";
 import NavigasiBalita from "@/components/NavigasiBalita";
 
@@ -34,7 +34,7 @@ export default function PermainanOwi() {
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#FFFDF5] text-[#34445B]">
-      <Navbar />
+      <NavbarBalita />
       <section id="permainan-owi" className="bg-[#F1E8FF] px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
