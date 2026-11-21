@@ -174,7 +174,15 @@ export default function PetualanganLiterasi() {
           ))}
         </div>
       </section>
-
+        {/* TOMBOL KEMBALI KE BERANDA UTAMA */}
+        <div className="mx-auto max-w-5xl px-6 pb-10 text-center">
+          <a
+            href="/"
+            className="inline-block rounded-2xl border-2 border-[#F5B942] bg-white px-7 py-3 font-extrabold text-[#60451C] shadow-sm transition hover:-translate-y-1 hover:bg-[#FFF0C9]"
+          >
+            🏠 Kembali ke Beranda Utama
+          </a>
+        </div>
       {/* ==================================================
           BAGIAN 8: FOOTER
           ================================================== */}

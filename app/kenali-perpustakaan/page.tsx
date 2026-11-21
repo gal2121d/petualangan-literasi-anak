@@ -1,14 +1,34 @@
+
+"use client";
+
 // ==================================================
 // BAGIAN 1: IMPORT
 // ==================================================
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useRef } from "react";
 
 // ==================================================
 // BAGIAN 2: KOMPONEN HALAMAN
 // ==================================================
 export default function KenaliPerpustakaan() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  function playAudio() {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+
+    const audio = new Audio("/audio/sd-misi1.wav");
+    audioRef.current = audio;
+
+    audio.play().catch(() => {
+      alert("Audio belum bisa diputar. Periksa kembali file suara Owi.");
+    });
+  }
+
   return (
     <main className="min-h-screen bg-[#FFFDF5] text-[#34445B]">
 
@@ -31,6 +51,17 @@ export default function KenaliPerpustakaan() {
           belajar, mencari informasi, dan meminjam buku. Di sini,
           kamu bisa menemukan banyak pengetahuan dan cerita menarik.
         </p>
+
+        {/* TOMBOL AUDIO OWI */}
+        <div className="mt-5">
+          <button
+            type="button"
+            onClick={playAudio}
+            className="rounded-2xl bg-[#F5B942] px-6 py-3 font-extrabold text-[#60451C] shadow-sm transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+          >
+            🔊 Dengarkan Penjelasan Owi
+          </button>
+        </div>
 
         {/* BAGIAN 2C: MANFAAT PERPUSTAKAAN */}
         <div className="my-10 grid gap-5 sm:grid-cols-2">

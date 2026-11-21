@@ -1,44 +1,42 @@
+
+"use client";
+
 // ==================================================
 // BAGIAN 1: IMPORT
 // ==================================================
+import { useRef } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 // ==================================================
 // BAGIAN 2: DATA PILIHAN TOPIK
-// Ubah ikon, nama, dan deskripsi topik di sini
 // ==================================================
 const topics = [
   {
     icon: "🐱",
-    title: "Hewan",
-    desc: "Kucing, gajah, kupu-kupu, dan hewan lainnya.",
+    title: "Kucing",
+    desc: "Yuk, mengenal hewan kucing!",
+    audio: "kucing.mp3.wav",
   },
   {
-    icon: "🌱",
-    title: "Tumbuhan",
-    desc: "Bunga, pohon, buah, dan tanaman.",
+    icon: "🐦",
+    title: "Burung",
+    desc: "Yuk, mengenal hewan burung!",
+    audio: "burung.mp3.wav",
   },
   {
-    icon: "🚀",
-    title: "Luar Angkasa",
-    desc: "Planet, bintang, bulan, dan matahari.",
+    icon: "🐸",
+    title: "Katak",
+    desc: "Yuk, mengenal hewan katak!",
+    audio: "kodok.mp3.wav",
   },
   {
-    icon: "🏛️",
-    title: "Sejarah",
-    desc: "Cerita masa lalu dan tokoh bersejarah.",
-  },
-  {
-    icon: "🌊",
-    title: "Lingkungan",
-    desc: "Laut, hutan, kebersihan, dan alam.",
-  },
-  {
-    icon: "⚽",
-    title: "Olahraga",
-    desc: "Sepak bola, renang, dan permainan.",
+    icon: "🐮",
+    title: "Sapi",
+    desc: "Yuk, mengenal hewan sapi!",
+    audio: "sapi.mp3.wav",
   },
 ];
 
@@ -46,6 +44,48 @@ const topics = [
 // BAGIAN 3: KOMPONEN HALAMAN
 // ==================================================
 export default function TentukanTopik() {
+  const router = useRouter();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const penjelasanRef = useRef<HTMLAudioElement | null>(null);
+
+  // ==================================================
+  // BAGIAN 3A: FUNGSI MEMUTAR PENJELASAN OWI
+  // ==================================================
+  function playPenjelasan() {
+    if (penjelasanRef.current) {
+      penjelasanRef.current.pause();
+      penjelasanRef.current.currentTime = 0;
+    }
+
+    const audio = new Audio("/audio/misi2.wav");
+    penjelasanRef.current = audio;
+
+    audio.play().catch(() => {
+      alert("Audio belum bisa diputar. Periksa kembali file suara Owi.");
+    });
+  }
+
+  // ==================================================
+  // BAGIAN 3B: FUNGSI MEMILIH TOPIK DAN MEMUTAR AUDIO
+  // ==================================================
+  function pilihTopik(fileName: string) {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+
+    const audio = new Audio(`/audio/${fileName}`);
+    audioRef.current = audio;
+
+    audio.onended = () => {
+      router.push("/cari-kata-kunci");
+    };
+
+    audio.play().catch(() => {
+      alert("Audio belum bisa diputar. Periksa kembali file rekaman Owi.");
+    });
+  }
+
   return (
     <main className="min-h-screen bg-[#FFFDF5] text-[#34445B]">
 
@@ -60,36 +100,67 @@ export default function TentukanTopik() {
         </span>
 
         <h1 className="mt-6 text-4xl font-black text-[#354B68]">
-          Tentukan Topik yang Kamu Sukai!
+          Tentukan Topik yang Kamu Sukai !
         </h1>
 
         <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-600">
           Sebelum mencari buku, tentukan dahulu hal yang ingin kamu ketahui.
-          Topik adalah pokok bahasan yang akan kamu cari informasinya.
-          Pilih topik yang paling menarik bagimu!
         </p>
 
+        <p>
+          Pilih salah satu gambar hewan yang paling menarik bagi kamu !
+        </p>
+
+        {/* TOMBOL AUDIO OWI */}
+        <div className="mt-5">
+          <button
+            type="button"
+            onClick={playPenjelasan}
+            className="rounded-2xl bg-[#F5B942] px-6 py-3 font-extrabold text-[#60451C] shadow-sm transition hover:-translate-y-1 hover:bg-[#F8C95E]"
+          >
+            🔊 Dengarkan Penjelasan Owi
+          </button>
+        </div>
+
         {/* BAGIAN 3C: KARTU PILIHAN TOPIK */}
-        <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
           {topics.map((topic) => (
-            <div
+            <button
               key={topic.title}
-              className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-gray-100"
+              type="button"
+              onClick={() => pilihTopik(topic.audio)}
+              className="rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-100 transition hover:-translate-y-1 hover:shadow-md hover:ring-[#F5B942] focus:outline-none focus:ring-2 focus:ring-[#F5B942]"
             >
-              <div className="text-5xl">
+
+              {/* GAMBAR HEWAN */}
+              <div className="text-6xl">
                 {topic.icon}
               </div>
 
+              {/* JUDUL TOPIK */}
               <h2 className="mt-4 text-xl font-black text-[#354B68]">
                 {topic.title}
               </h2>
 
-              <p className="mt-2 leading-7 text-gray-600">
+              {/* PENJELASAN */}
+              <p className="mt-2 text-sm leading-7 text-gray-600">
                 {topic.desc}
               </p>
-            </div>
+
+              {/* PETUNJUK KLIK */}
+              <span className="mt-4 inline-block rounded-xl bg-[#FFF0C9] px-4 py-2 text-sm font-bold text-[#805B24]">
+                🔊 Pilih Topik
+              </span>
+
+            </button>
           ))}
+
         </div>
+
+        <p>ㅤ</p>
+
+        <p>Dipilih dulu yaaa topiknya (gambar hewannya) 😁</p>
 
         {/* BAGIAN 3D: CONTOH MENENTUKAN TOPIK */}
         <div className="mt-9 rounded-3xl bg-[#FFF0C9] p-7">
@@ -98,7 +169,7 @@ export default function TentukanTopik() {
           </h2>
 
           <p className="mt-3 leading-7 text-gray-700">
-            Misalnya, kamu ingin mengetahui cara merawat kucing.
+            Misalnya, kamu ingin mengetahui tentang kucing.
             Maka, topik yang kamu pilih adalah <strong>Hewan</strong>,
             khususnya <strong>Kucing</strong>.
           </p>
@@ -112,13 +183,7 @@ export default function TentukanTopik() {
           >
             ← Misi Sebelumnya
           </Link>
-
-          <Link
-            href="/cari-kata-kunci"
-            className="rounded-xl bg-[#F5B942] px-6 py-3 font-bold text-[#60451C]"
-          >
-            Misi Selanjutnya →
-          </Link>
+          
         </div>
 
       </section>
