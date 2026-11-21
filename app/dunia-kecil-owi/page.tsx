@@ -152,7 +152,7 @@ export default function DuniaKecilOwi() {
       ================================================== */}
       <section
         id="petualangan"
-        className="mx-auto max-w-7xl scroll-mt-8 px-6 pb-20 pt-2"
+        className="mx-auto max-w-7xl scroll-mt-8 px-6 pb-8 pt-2"
       >
 
         {/* BAGIAN 6A: JUDUL KEGIATAN */}
